@@ -1,0 +1,7 @@
+{
+	"type": "objectTemplate",
+	"name": "console",
+	"methods": [
+		"log"
+	]
+}

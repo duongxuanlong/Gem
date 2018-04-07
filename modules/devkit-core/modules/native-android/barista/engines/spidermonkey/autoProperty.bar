@@ -1,0 +1,35 @@
+{#autoProperties obj_name=name}
+{#.userGetter}
+{:else}
+CEXPORT JSBool def_{obj_name}_get_{.name}(JSContext *cx, JSHandleObject obj, JSHandleId id, JSMutableHandleValue vp) {
+	JS_BeginRequest(cx);
+	{obj_name} *thiz = ({obj_name}*)JS_GetPrivate(obj.get());
+	if (thiz) {
+		{#customGetter}
+		{.}
+		{:else}
+		vp.set{.jsType}(thiz->{.cName});
+		{/customGetter}
+	}
+	JS_EndRequest(cx);
+	return JS_TRUE;
+}
+{/.userGetter}
+
+{#.userSetter}
+{:else}
+CEXPORT JSBool def_{obj_name}_set_{.name}(JSContext *cx, JSHandleObject obj, JSHandleId id, JSBool strict, JSMutableHandleValue vp) {
+	JS_BeginRequest(cx);
+	{obj_name} *thiz = ({obj_name}*)JS_GetPrivate(obj.get());
+	if (thiz) {
+		{#customSetter}
+		{.}
+		{:else}
+		thiz->{cName} = vp.to{.jsType}();
+		{/customSetter}
+	}
+	JS_EndRequest(cx);
+	return JS_TRUE;
+}
+{/.userSetter}
+{/autoProperties}

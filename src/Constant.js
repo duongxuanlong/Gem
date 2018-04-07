@@ -1,0 +1,3 @@
+var BASEWIDTH = 576;
+var BASEHEIGHT = 1024;
+var FOUNDHEIGHT = 0;

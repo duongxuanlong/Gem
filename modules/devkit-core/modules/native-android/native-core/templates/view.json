@@ -1,0 +1,156 @@
+{
+	"type": "objectTemplate",
+	"name": "timestep_view",
+	"jsName": "View",
+	"headers": [
+		"core/timestep/timestep_view.h",
+		"core/rgba.h"
+	],
+	"hasConstructor": true,
+	"constructorArgc": 1,
+	"autoProperties": [
+		{
+			"type": "double",
+			"name": "x"
+		},
+		{
+			"type": "double",
+			"name": "y"
+		},
+		{
+			"type": "double",
+			"name": "offsetX"
+		},
+		{
+			"type": "double",
+			"name": "offsetY"
+		},
+		{
+			"type": "double",
+			"name": "r"
+		},
+		{
+			"type": "bool",
+			"name": "flipX"
+		},
+		{
+			"type": "bool",
+			"name": "flipY"
+		},
+		{
+			"type": "double",
+			"name": "anchorX"
+		},
+		{
+			"type": "double",
+			"name": "anchorY"
+		},
+		{
+			"type": "double",
+			"name": "opacity",
+			"userSetter": "true"
+		},
+		{
+			"type": "double",
+			"name": "scale"
+		},
+		{
+			"type": "double",
+			"name": "scaleX"
+		},
+		{
+			"type": "double",
+			"name": "scaleY"
+		},
+		{
+			"type": "double",
+			"name": "absScale"
+		},
+		{
+			"type": "bool",
+			"name": "clip"
+		},
+		{
+			"type": "rgba",
+			"name": "backgroundColor"
+		},
+		{
+			"type": "bool",
+			"name": "visible"
+		},
+		{
+			"type": "bool",
+			"name": "hasJSRender"
+		},
+		{
+			"type": "bool",
+			"name": "hasJSTick"
+		},
+		{
+			"type": "int",
+			"name": "zIndex",
+			"userSetter": true
+		},
+		{
+			"type": "rgba",
+			"name": "filterColor"
+		},
+		{
+			"type": "int",
+			"name": "filterType"
+		},
+		{
+			"type": "double",
+			"name": "width"
+		},
+		{
+			"name": "_width",
+			"type": "double",
+			"userSetter": true,
+			"userGetter": true
+		},
+		{
+			"type": "double",
+			"name": "height"
+		},
+		{
+			"name": "_height",
+			"type": "double",
+			"userSetter": true,
+			"userGetter": true
+		}
+	],
+	"properties": [
+		"compositeOperation"
+	],
+	"methods": [
+		{
+			"name": "addSubview",
+			"argCount": 1
+		},
+		{
+			"name": "removeSubview",
+			"argCount": 1
+		},
+		{
+			"name": "getSuperview",
+			"argCount": 0
+		},
+		{
+			"name": "getSubviews",
+			"argCount": 0
+		},
+		{
+			"name": "wrapRender",
+			"argCount": 2
+		},
+		{
+			"name": "wrapTick",
+			"argCount": 1
+		},
+		{
+			"name": "localizePoint",
+			"argCount": 1
+		}
+	]
+}

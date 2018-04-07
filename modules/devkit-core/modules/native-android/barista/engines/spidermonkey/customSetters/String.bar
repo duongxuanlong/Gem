@@ -1,0 +1,11 @@
+if (vp.isString()) {
+	JSString *jstr = vp.toString();
+
+	JSTR_TO_CSTR_PERSIST(cx, jstr, cstr);
+
+	if (thiz->{name}) {
+		free(thiz->{name});
+	}
+
+	thiz->{name} = cstr;
+}

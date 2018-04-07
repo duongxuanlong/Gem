@@ -1,0 +1,13 @@
+{
+	"type": "objectTemplate",
+	"name": "sound",
+	"methods": [
+		"playSound",
+		"loadSound",
+		"playBackgroundMusic",
+		"loadBackgroundMusic",
+		"stopSound",
+		"pauseSound",
+		"setVolume"
+	]
+}

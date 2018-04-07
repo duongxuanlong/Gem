@@ -1,0 +1,8 @@
+{
+	"type": "objectTemplate",
+	"name": "gc",
+	"methods": [
+		"runGC",
+		"runMaybeGC"
+	]
+}

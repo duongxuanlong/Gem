@@ -1,0 +1,8 @@
+{
+	"type": "objectTemplate",
+	"name": "timer",
+	"methods": [
+		"start"
+	]
+
+}

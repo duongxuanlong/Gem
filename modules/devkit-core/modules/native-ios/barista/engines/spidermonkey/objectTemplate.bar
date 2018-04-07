@@ -1,0 +1,51 @@
+/* @license
+ * This file is part of the Game Closure SDK.
+ *
+ * The Game Closure SDK is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ 
+ * The Game Closure SDK is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ 
+ * You should have received a copy of the GNU General Public License
+ * along with the Game Closure SDK.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+#include "js_{name}_template.gen.h"
+#include "js/js_{name}.h"
+
+{#headers}
+#include "{.}"
+{/headers}
+{#templateNames}
+
+#include "js_{.}_template.gen.h"{/templateNames}
+#include "js/js_core.h"
+
+{autoProperties}
+
+{methodArray}
+
+{propertyArray}
+
+static const JSClass {name}_class = {
+	"{jsName}",
+	JSCLASS_HAS_PRIVATE,
+	JS_PropertyStub, JS_PropertyStub, JS_PropertyStub, JS_StrictPropertyStub,
+	JS_EnumerateStub, JS_ResolveStub, JS_ConvertStub, def_{name}_class_finalize,
+	JSCLASS_NO_OPTIONAL_MEMBERS
+};
+
+CEXPORT JSObject *{name}_create_ctor_object(JSContext *cx, jsval *vp) {
+	return JS_NewObjectForConstructor(cx, (JSClass*)&{name}_class, vp);
+}
+
+CEXPORT void {name}_add_to_object(JSObject *parent) {
+	JSContext *cx = get_js_context();
+	JS_InitClass(cx, parent, NULL, (JSClass*)&{name}_class, def_{name}_class_constructor,
+		{constructorArgc}, (JSPropertySpec *)properties, (JSFunctionSpec *)functions, NULL, NULL);
+}

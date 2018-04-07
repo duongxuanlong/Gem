@@ -1,0 +1,3 @@
+{#templates}
+v8::Handle<v8::FunctionTemplate> js_{.}_get_template();
+{name}->Set(v8::String::New("{.}"), js_{.}_get_template()->GetFunction()->NewInstance());{/templates}

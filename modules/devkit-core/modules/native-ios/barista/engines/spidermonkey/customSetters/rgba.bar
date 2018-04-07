@@ -1,0 +1,9 @@
+if (vp.isString()) {
+	JSString *jstr = vp.toString();
+
+	JSTR_TO_CSTR(cx, jstr, cstr);
+
+	rgba color;
+	rgba_parse(&color, cstr);
+	thiz->{cName} = color;
+}

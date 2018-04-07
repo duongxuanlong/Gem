@@ -1,0 +1,121 @@
+{
+	"type": "objectTemplate",
+	"name": "timestep_view",
+	"jsName": "View",
+	"headers": [
+		"core/timestep/timestep_view.h",
+		"core/rgba.h"
+	],
+	"hasConstructor": true,
+	"constructorArgc": 1,
+	"autoProperties": [
+		{
+			"type": "double",
+			"name": "x"
+		},
+		{
+			"type": "double",
+			"name": "y"
+		},
+		{
+			"type": "double",
+			"name": "widthPercent",
+			"userSetter": true,
+			"userGetter": true
+		},
+		{
+			"type": "double",
+			"name": "heightPercent",
+			"userSetter": true,
+			"userGetter": true
+		},
+		{
+			"type": "double",
+			"name": "r"
+		},
+		{
+			"type": "double",
+			"name": "anchorX"
+		},
+		{
+			"type": "double",
+			"name": "anchorY"
+		},
+		{
+			"type": "double",
+			"name": "opacity",
+			"userSetter": "true"
+		},
+		{
+			"type": "double",
+			"name": "scale"
+		},
+		{
+			"type": "double",
+			"name": "clip"
+		},
+		{
+			"type": "rgba",
+			"name": "backgroundColor"
+		},
+		{
+			"type": "double",
+			"name": "visible"
+		},
+		{
+			"type": "bool",
+			"name": "hasJSRender"
+		},
+		{
+			"type": "bool",
+			"name": "hasJSTick"
+		},
+		{
+			"type": "bool",
+			"name": "__firstRender"
+		},
+		{
+			"type": "int",
+			"name": "zIndex",
+			"userSetter": true
+		},
+		{
+			"type": "rgba",
+			"name": "filterColor"
+		}
+	],
+	"properties": [
+		"width",
+		"height"
+	],
+	"methods": [
+		{
+			"name": "addSubview",
+			"argCount": 1
+		},
+		{
+			"name": "removeSubview",
+			"argCount": 1
+		},
+		{
+			"name": "getSuperview",
+			"argCount": 0
+		},
+		{
+			"name": "getSubviews",
+			"argCount": 0
+		},
+		{
+			"name": "wrapRender",
+			"argCount": 2
+		},
+		{
+			"name": "wrapTick",
+			"argCount": 1
+		},
+		{
+			"name": "localizePoint",
+			"argCount": 1
+		}
+	]
+}

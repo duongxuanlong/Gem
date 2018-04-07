@@ -1,0 +1,7 @@
+if (value->IsString()) {
+	String::Utf8Value s(value);
+	const char *str = ToCString(s);
+	rgba color;
+	rgba_parse(&color, str);
+	obj->{cName} = color;
+}

@@ -1,0 +1,3 @@
+{#methods obj_name=name}
+v8::Handle<v8::Value> def_{obj_name}_{.name}(const v8::Arguments &args);
+{obj_name}->Set(v8::String::New("{.name}"), v8::FunctionTemplate::New(def_{obj_name}_{.name}));{/methods}
